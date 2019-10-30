@@ -1,0 +1,196 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+/*设置居中*/
+#body {
+	padding: 0px 5%;
+}
+
+/*头部*/
+
+#head {
+	width: 100%;
+	height: 50px;
+	border: 1px solid black;
+}
+
+
+/*logo*/
+
+#logo {
+	border: 0px solid blue;
+	padding: 3% 0px;
+	border-bottom: 1px solid #E8E8E8;
+}
+
+
+/*文字*/
+
+#text_one {
+	padding: 1% 0px;
+}
+
+#my {
+	font-size: 18px;
+}
+
+#msg {
+	float: right;
+	font-size: 14px;
+	color: #999999;
+}
+
+
+/*购物车图标*/
+
+#car {
+	width: 100%;
+	height: 700px;
+	/*margin: 0px auto;*/
+	border: 0px solid black;
+	text-align: center;
+	font-size: 18px;
+	/*父级 relative定位*/
+	position: relative;
+}
+
+.car_one {
+	/* absolute 定位 使内容居中*/
+	width: 100%;
+	height: 30%;
+	position: absolute;
+	top: 40%;
+	border: 0px solid black;
+}
+
+.car_one p {
+	margin-bottom: 2%;
+}
+
+
+/*登录 按钮*/
+
+.login,
+.continue {
+	text-align: center;
+	padding: 1% 4%;
+}
+
+.login {
+	color: white;
+	background-color: #2AB5E9;
+	border: 1px solid #2AB5E9;
+	margin-right: 1%;
+	/*display: none;	*/
+}
+
+
+/*继续逛 按钮*/
+
+.continue {
+	color: #62C7EF;
+	background-color: #D5F1FB;
+	border: 1px solid #62C7EF;
+}
+
+
+/*购物车头部开始*/
+
+.tr_head {
+	background-color: #F3F3F3;
+}
+
+td {
+	padding: 1% 0px;
+	border: 0px solid black;
+}
+
+ul {
+	list-style: none;
+}
+
+ul li {
+	padding:3% 0px;
+}
+
+
+/*设置商品边框*/
+
+.tr_rows td {
+	border-bottom: 1px solid #E8E8E8;
+	border-top: 1px solid #E8E8E8;
+}
+.tr_rows td:nth-of-type(1) {
+	border-left: 1px solid #E8E8E8;
+}
+
+.tr_rows td:last-of-type {
+	border-right: 1px solid #E8E8E8;
+}
+/*原价*/
+.dere {
+	text-decoration: line-through;
+	color: #A6A8A8;
+	font-size: 14px;
+}
+/*数量*/
+.add,.minus,
+.num_input {
+	border: 1px solid #999999;
+	float: left;
+	line-height: 23px;
+	text-align: center;
+	padding: 12px;
+	margin-right: 0px;
+}
+/*设置  pointer*/
+.add,.minus,
+.move,.allCheckBox,
+.del,.cart_td_1,
+.final {
+	cursor: pointer;
+}
+/*减号*/
+.minus {
+	border-right: none;
+	margin-left: ;
+}
+/*加号*/
+.add {
+	border-left: none;
+}
+
+
+/*去除a标签下划线*/
+a {
+	text-decoration: none;
+	color: black;
+}
+/*设置价格字体为红色*/
+.total_money span {
+	color: red;
+}
+
+.total_money td:nth-of-type(3) {
+	color: #999999;
+	padding-left: 3%;
+	width: 11%;
+}
+
+.total_money td:nth-of-type(5) {
+	text-align: right;
+}
+
+#total_price {
+	font-size: 30px;
+}
+/*去结算*/
+.final {
+	width: 7%;
+	padding: 1% 0px;
+	background-color: red;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}
