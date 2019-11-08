@@ -4,5 +4,10 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="cn.bdqn.dao.user.UserMapper">
-
+    <select id="getUsersList" resultType="user">
+		select * from user where uname=#{uname}
+	</select>
+    <insert id="addUser" parameterType="user">
+		INSERT INTO `user`(uname,upwd) VALUE(#{uname},#{upwd})
+	</insert>
 </mapper>

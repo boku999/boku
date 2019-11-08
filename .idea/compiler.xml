@@ -10,5 +10,8 @@
         <module name="BoKu" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="boku" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>

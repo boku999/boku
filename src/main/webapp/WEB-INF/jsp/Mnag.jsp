@@ -27,7 +27,7 @@
 <link rel="stylesheet" type="text/css" href="/statics/css/flexslider.css" />
 <script type="text/javascript" src="/statics/js/flexslider.js"></script>
 <meta name="baidu-site-verification" content="s3QQaARPSL" />
-<title id="www_pc_title"></title>
+<title id="www_pc_title">博库网</title>
 </head>
 
 <body>
@@ -40,15 +40,15 @@
 				<p class="fl" id="www_user_session_info">
 			<c:choose>
 					<c:when test="${isok==false }">
-						<a class="hover cl-6" href="login.jsp" title="登录">登录</a>
+						<a class="hover cl-6" href="/user/login.html" title="登录">登录</a>
 						<span class="pd-0005 cl-c">|</span>
-						<a class="mr-30 hover cl-6" href="registered.jsp" title="免费注册">免费注册</a>
+						<a class="mr-30 hover cl-6" href="/user/registered.html" title="免费注册">免费注册</a>
 					</c:when>
 					<c:otherwise>
 					欢迎：${uid.uname}
 					<span class="pd-0005 cl-c">|</span>
-						<a class="mr-30 hover cl-6" href="BookServlet?opr=out&isok=false"
-							title="退出登陆">退出登陆</a>
+						<a class="mr-30 hover cl-6" href="/user/loginout.html?url=Mnag"
+							title="退出登录">退出登录</a>
 					</c:otherwise>
 					</c:choose>
 					<a class="hover cl-6" href="/download.php" target="_blank"
@@ -56,7 +56,7 @@
 						class="icon-phone-line cl-bl-l fs-16 tp-3 mr-2 pr"></span>下载博库APP</a>
 				</p>
 				<p class="fr">
-					<a class="hover fr cl-6" href="javascript:void()"
+					<a class="hover fr cl-6" href="javascript:void(0);"
 						onclick="openQimooChat();" title="联系客服">联系客服</a> <span
 						class="pd-0015 cl-c fr">|</span> <a class="hover fr cl-6"
 						href="/user/shop/settings.php" target="_blank" title="店铺管理">店铺管理</a>
@@ -69,7 +69,7 @@
 					</label>
 					<div class="acount">
 						<a class="hover cl-6 to-hd" href="#" target="_blank" title="">我的博库</a>
-						<a class="hover cl-6 to-hd" href="OrderItemServlet?usid=${uid.uid}"
+						<a class="hover cl-6 to-hd" href="/order/orderItem.html?usid=${uid.uid}"
 							target="_blank" title="">我的订单</a> <a class="hover cl-6 to-hd"
 							href="#" target="_blank" title="">我的优惠券</a> <a
 							class="hover cl-6 to-hd" href="#"
@@ -93,8 +93,8 @@
 		<div class="wd-1200 ma">
 			<div class="search-container" id="search-container">
 				<div class="logo-container">
-					<a class="db logo-box fl" href="/index.php"> <img
-						src="img/logo.png" alt=""
+					<a class="db logo-box fl" href="/book/Mnag.html"> <img
+						src="/statics/img/logo.png" alt=""
 						width="220" class="db" alt="logo" draggable="false" /> </a>
 					<!-- 搜索 -->
 					<div class="fl">
@@ -126,7 +126,7 @@
 					<div class="fr ta-rt mt-8 cart">
 						<!-- uid=0当没有登陆的时候	-->
 						<a class="fs-16 bd-1-d br-4 pd-0610 cart-box"
-							href="UserBooksServlet?opr=gwc&usid=${uid.uid}"> <span
+							href="/car/userBooks.html?usid=${uid.uid}"> <span
 							class="icon-cart-block mr-10 cl-a9 pr tp-3 fs-18"></span>
 							<span class="mr-5">购物车</span> <label
 							class="cl-f fw-nm br-10 cart_num"></label> </a>
@@ -137,7 +137,7 @@
 			<!-- 分类 -->
 			<div class="nav-box">
 				<div class="type fl public">
-					<a target="_blank" class="db cl-f title" href="Classification.jsp"><span
+					<a target="_blank" class="db cl-f title" href="/category/classification.html"><span
 						class="icon-type-line cl-f mr-10 pr tp-2"></span>所有商品分类</a>
 
 				</div>
@@ -468,31 +468,31 @@
 				<div class="flexslider banner index">
 					<ul class="slides">
 						<li><a target="_blank" href="#"> <img
-								data-src="img/20190409142950470.jpg"
+								data-src="/statics/img/20190409142950470.jpg"
 								alt="70" width="1920" height="400" class="db hidden"> </a></li>
 						<li><a target="_blank" href="#"> <img
-								data-src="img/20190805110525914.jpg"
+								data-src="/statics/img/20190805110525914.jpg"
 								alt="山海" width="1920" height="400" class="db hidden"> </a></li>
 						<li><a target="_blank" href="#"> <img
-								data-src="img/20190712164446175.jpg"
+								data-src="/statics/img/20190712164446175.jpg"
 								alt="良渚" width="1920" height="400" class="db hidden"> </a></li>
 						<li><a target="_blank" href="#"> <img
-								data-src="img/20190816131521976.jpg"
+								data-src="/statics/img/20190816131521976.jpg"
 								alt="历史" width="1920" height="400" class="db hidden"> </a></li>
 						<li><a target="_blank" href="#"> <img
-								data-src="img/20190628134930321.jpg"
+								data-src="/statics/img/20190628134930321.jpg"
 								alt="新" width="1920" height="400" class="db hidden"> </a></li>
 						<li><a target="_blank" href="#"> <img
-								data-src="img/20190712133447402.jpg"
+								data-src="/statics/img/20190712133447402.jpg"
 								alt="武侠" width="1920" height="400" class="db hidden"> </a></li>
 						<li><a target="_blank" href="#"> <img
-								data-src="img/20190620183433381.jpg"
+								data-src="/statics/img/20190620183433381.jpg"
 								alt="扶贫" width="1920" height="400" class="db hidden"> </a></li>
 						<li><a target="_blank" href="#"> <img
-								data-src="img/20190214175654483.jpg"
+								data-src="/statics/img/20190214175654483.jpg"
 								alt="" width="1920" height="400" class="db hidden"> </a></li>
 						<li><a target="_blank" href="#"> <img
-								data-src="img/20171019172549302.jpg"
+								data-src="/statics/img/20171019172549302.jpg"
 								alt="app" width="1920" height="400" class="db hidden"> </a></li>
 					</ul>
 				</div>
@@ -541,37 +541,37 @@
 							<li class="wd-50p fl ht-183">
 								<div class="bd-4-f scale oh">
 									<a class="db" target="_blank" href="#"> <img
-										data-src="img/20170811135737589.jpg"
+										data-src="/statics/img/20170811135737589.jpg"
 										alt="品质好书" width="190" height="175" class="hidden db"> </a>
 								</div></li>
 							<li class="wd-50p fl ht-183">
 								<div class="bd-4-f scale oh">
 									<a class="db" target="_blank" href="#"> <img
-										data-src="img/20170815100145178.jpg"
+										data-src="/statics/img/20170815100145178.jpg"
 										alt="独家特供" width="190" height="175" class="hidden db"> </a>
 								</div></li>
 							<li class="wd-50p fl ht-93">
 								<div class="bd-4-f scale oh">
 									<a class="db" target="_blank" href="#"> <img
-										data-src="img/20170816115027610.jpg"
+										data-src="/statics/img/20170816115027610.jpg"
 										alt="传家礼品" width="190" height="85" class="hidden db"> </a>
 								</div></li>
 							<li class="wd-50p fl ht-93">
 								<div class="bd-4-f scale oh">
 									<a class="db" target="_blank" href="#"> <img
-										data-src="img/20170816115237948.jpg"
+										data-src="/statics/img/20170816115237948.jpg"
 										alt="好书成套" width="190" height="85" class="hidden db"> </a>
 								</div></li>
 							<li class="wd-50p fl ht-93">
 								<div class="bd-4-f scale oh">
 									<a class="db" target="_blank" href="#"> <img
-										data-src="img/20170815095814351.jpg"
+										data-src="/statics/img/20170815095814351.jpg"
 										alt="文创" width="190" height="85" class="hidden db"> </a>
 								</div></li>
 							<li class="wd-50p fl ht-93">
 								<div class="bd-4-f scale oh">
 									<a class="db" target="_blank" href="#"> <img
-										data-src="img/20171219120005511.jpg"
+										data-src="/statics/img/20171219120005511.jpg"
 										alt="生活美学" width="190" height="85" class="hidden db"> </a>
 								</div></li>
 						</ul></li>
@@ -611,13 +611,13 @@
 									target="_blank" href="#">
 										<div class="fl wd-30 ta-lf">
 											<img
-												src="img/first-block.svg"
+												src="/statics/img/first-block.svg"
 												alt="" width="20" class="pr tp-4" />
 										</div>
 										<p class="fl wd-100 ht-100 oh mr-10 scale-box">
 											<label class="db pd-5 scale oh pr"> <span
 												class="img db square-box one-one bgimg lazyload hidden"
-												data-bgimg="background-image: url(img/39/2375506.jpg);"></span>
+												data-bgimg="background-image: url(/statics/img/2375506.jpg);"></span>
 											</label>
 										</p>
 										<div class="fl wd-200 to-hd">我们仨</div>
@@ -627,13 +627,13 @@
 									href="#">
 										<div class="fl wd-30 ta-lf">
 											<img
-												src="img/second-block.svg"
+												src="/statics/img/second-block.svg"
 												alt="" width="20" class="pr tp-4" />
 										</div>
 										<p class="fl wd-100 ht-100 oh mr-10 scale-box">
 											<label class="db pd-5 scale oh pr"> <span
 												class="img db square-box one-one bgimg lazyload hidden"
-												data-bgimg="background-image: url(img/2353163.jpg);"></span>
+												data-bgimg="background-image: url(/statics/img/2353163.jpg);"></span>
 											</label>
 										</p>
 										<div class="fl wd-200 to-hd">活着/余华作品</div>
@@ -643,13 +643,13 @@
 									href="#">
 										<div class="fl wd-30 ta-lf">
 											<img
-												src="img/third-block.svg"
+												src="/statics/img/third-block.svg"
 												alt="" width="20" class="pr tp-4" />
 										</div>
 										<p class="fl wd-100 ht-100 oh mr-10 scale-box">
 											<label class="db pd-5 scale oh pr"> <span
 												class="img db square-box one-one bgimg lazyload hidden"
-												data-bgimg="background-image: url(img/2282203.jpg@!w210);"></span>
+												data-bgimg="background-image: url(/statics/img/2282203.jpg);"></span>
 											</label>
 										</p>
 										<div class="fl wd-200 to-hd">偷影子的人</div>
@@ -661,7 +661,7 @@
 										<p class="fl wd-100 ht-100 oh mr-10 scale-box">
 											<label class="db pd-5 scale oh pr"> <span
 												class="img db square-box one-one bgimg lazyload hidden"
-												data-bgimg="background-image: url(img/1562730332.jpg);"></span>
+												data-bgimg="background-image: url(/statics/img/1562730332.jpg);"></span>
 											</label>
 										</p>
 										<div class="fl wd-200 to-hd">三体（1-3 共3册）</div>
@@ -673,7 +673,7 @@
 										<p class="fl wd-100 ht-100 oh mr-10 scale-box">
 											<label class="db pd-5 scale oh pr"> <span
 												class="img db square-box one-one bgimg lazyload hidden"
-												data-bgimg="background-image: url(img/1608336.jpg);"></span>
+												data-bgimg="background-image: url(/statics/img/1608336.jpg);"></span>
 											</label>
 										</p>
 										<div class="fl wd-200 to-hd">狼王梦/动物小说大王沈石溪品藏书系</div>
@@ -684,13 +684,13 @@
 									target="_blank" href="#">
 										<div class="fl wd-30 ta-lf">
 											<img
-												src="img/first-block.svg"
+												src="/statics/img/first-block.svg"
 												alt="" width="20" class="pr tp-4" />
 										</div>
 										<p class="fl wd-100 ht-100 oh mr-10 scale-box">
 											<label class="db pd-5 scale oh pr"> <span
 												class="img db square-box one-one bgimg lazyload hidden"
-												data-bgimg="background-image: url(img/1608336.jpg);"></span>
+												data-bgimg="background-image: url(/statics/img/1608336.jpg);"></span>
 											</label>
 										</p>
 										<div class="fl wd-200 to-hd">狼王梦/动物小说大王沈石溪品藏书系</div>
@@ -700,13 +700,13 @@
 									href="#">
 										<div class="fl wd-30 ta-lf">
 											<img
-												src="img/second-block.svg"
+												src="/statics/img/second-block.svg"
 												alt="" width="20" class="pr tp-4" />
 										</div>
 										<p class="fl wd-100 ht-100 oh mr-10 scale-box">
 											<label class="db pd-5 scale oh pr"> <span
 												class="img db square-box one-one bgimg lazyload hidden"
-												data-bgimg="background-image: url(img/1971599.jpg);"></span>
+												data-bgimg="background-image: url(/statics/img/1971599.jpg);"></span>
 											</label>
 										</p>
 										<div class="fl wd-200 to-hd">父与子全集(彩色双语版)/常青藤绘本馆</div>
@@ -716,13 +716,13 @@
 									href="#">
 										<div class="fl wd-30 ta-lf">
 											<img
-												src="img/third-block.svg"
+												src="/statics/img/third-block.svg"
 												alt="" width="20" class="pr tp-4" />
 										</div>
 										<p class="fl wd-100 ht-100 oh mr-10 scale-box">
 											<label class="db pd-5 scale oh pr"> <span
 												class="img db square-box one-one bgimg lazyload hidden"
-												data-bgimg="background-image: url(img/3211727.jpg);"></span>
+												data-bgimg="background-image: url(/statics/img/3211727.jpg);"></span>
 											</label>
 										</p>
 										<div class="fl wd-200 to-hd">中华上下五千年(共4册)</div>
@@ -734,7 +734,7 @@
 										<p class="fl wd-100 ht-100 oh mr-10 scale-box">
 											<label class="db pd-5 scale oh pr"> <span
 												class="img db square-box one-one bgimg lazyload hidden"
-												data-bgimg="background-image: url(img/1628401.jpg);"></span>
+												data-bgimg="background-image: url(/statics/img/1628401.jpg);"></span>
 											</label>
 										</p>
 										<div class="fl wd-200 to-hd">长袜子皮皮(美绘版)/林格伦作品选集</div>
@@ -746,7 +746,7 @@
 										<p class="fl wd-100 ht-100 oh mr-10 scale-box">
 											<label class="db pd-5 scale oh pr"> <span
 												class="img db square-box one-one bgimg lazyload hidden"
-												data-bgimg="background-image: url(img/0240849.jpg);"></span>
+												data-bgimg="background-image: url(/statics/img/0240849.jpg);"></span>
 											</label>
 										</p>
 										<div class="fl wd-200 to-hd">三毛流浪记全集(彩图注音读物)</div>
@@ -757,13 +757,13 @@
 									target="_blank" href="#">
 										<div class="fl wd-30 ta-lf">
 											<img
-												src="img/first-block.svg"
+												src="/statics/img/first-block.svg"
 												alt="" width="20" class="pr tp-4" />
 										</div>
 										<p class="fl wd-100 ht-100 oh mr-10 scale-box">
 											<label class="db pd-5 scale oh pr"> <span
 												class="img db square-box one-one bgimg lazyload hidden"
-												data-bgimg="background-image: url(img/2375506.jpg);"></span>
+												data-bgimg="background-image: url(/statics/img/2375506.jpg);"></span>
 											</label>
 										</p>
 										<div class="fl wd-200 to-hd">我们仨</div>
@@ -773,13 +773,13 @@
 									href="#">
 										<div class="fl wd-30 ta-lf">
 											<img
-												src="img/second-block.svg"
+												src="/statics/img/second-block.svg"
 												alt="" width="20" class="pr tp-4" />
 										</div>
 										<p class="fl wd-100 ht-100 oh mr-10 scale-box">
 											<label class="db pd-5 scale oh pr"> <span
 												class="img db square-box one-one bgimg lazyload hidden"
-												data-bgimg="background-image: url(img/2353163.jpg);"></span>
+												data-bgimg="background-image: url(/statics/img/2353163.jpg);"></span>
 											</label>
 										</p>
 										<div class="fl wd-200 to-hd">活着/余华作品</div>
@@ -789,13 +789,13 @@
 									href="#">
 										<div class="fl wd-30 ta-lf">
 											<img
-												src="img/third-block.svg"
+												src="/statics/img/third-block.svg"
 												alt="" width="20" class="pr tp-4" />
 										</div>
 										<p class="fl wd-100 ht-100 oh mr-10 scale-box">
 											<label class="db pd-5 scale oh pr"> <span
 												class="img db square-box one-one bgimg lazyload hidden"
-												data-bgimg="background-image: url(img/1561512342.jpg);"></span>
+												data-bgimg="background-image: url(/statics/img/1561512342.jpg);"></span>
 											</label>
 										</p>
 										<div class="fl wd-200 to-hd">夏洛的网</div>
@@ -807,9 +807,9 @@
 										<p class="fl wd-100 ht-100 oh mr-10 scale-box">
 											<label class="db pd-5 scale oh pr"> <span
 												class="img db square-box one-one bgimg lazyload hidden"
-												data-bgimg="background-image: url(img/2417879.jpg);"></span>
+												data-bgimg="background-image: url(/statics/img/2417879.jpg);"></span>
 												<span class="tip-box"> <img
-													src="img/20190627092413576.png">
+													src="/statics/img/20190627092413576.png">
 											</span> </label>
 										</p>
 										<div class="fl wd-200 to-hd">看见</div>
@@ -821,9 +821,9 @@
 										<p class="fl wd-100 ht-100 oh mr-10 scale-box">
 											<label class="db pd-5 scale oh pr"> <span
 												class="img db square-box one-one bgimg lazyload hidden"
-												data-bgimg="background-image: url(img/3006051.jpg);"></span>
+												data-bgimg="background-image: url(/statics/img/3006051.jpg);"></span>
 												<span class="tip-box"> <img
-													src="img/20190701140914689.png	">
+													src="/statics/img/20190701140914689.png	">
 											</span> </label>
 										</p>
 										<div class="fl wd-200 to-hd">乖摸摸头</div>
@@ -892,7 +892,7 @@
 							<label class="fl fs-18 mr-15"> <img
 								class="icon-book-line2 mr-4 fs-24 pr tp-5" width="25"
 								height="25"
-								src="img/tuijian.png">
+								src="/statics/img/tuijian.png">
 								图书推荐 </label>
 							<p class="fr">
 								<a class="red cp cl-3 pd-0410 mr-10  my_tab" data-id="6711"
@@ -921,13 +921,13 @@
 
 												<a 
 													class="db square-box one-one bgimg lazyload hidden"
-													href="BookServlet?bookid=${boId.bookid }&opr=xq">
-													<img src="${boId.bookimg }" />
+													href="/book/book.html?bookid=${boId.bookid }">
+													<img src="/statics/${boId.bookimg }" />
 												</a>
 											</div>
 											<div class="context">
 												<a class="db cl-6 ht-36 lh-18 oh mt-2" 
-													href="BookServlet?bid=101266135&opr=xq">${boId.bookname }</a>
+													href="/book/book.html?bookid=${boId.bookid }">${boId.bookname }</a>
 												<p class="lh-40">
 													<span class="fs-16 cl-rd-l ">¥${boId.price }</span> <span
 														class="cl-9">|</span>
@@ -959,7 +959,7 @@
 	<!-- 右侧导航 -->
 	<div class="rightmenu-box">
 		<div class="rightmenu">
-			<a href="javascript:void()" onclick="openQimooChat();"
+			<a href="javascript:void(0);" onclick="openQimooChat();"
 				class="cl-9 bt-1-8f hover download" title="联系客服"> <span
 				class="icon-zzzzzzzserver-line cl-9 fs-20"></span>
 				<p class="fs-12 lh-1p2">
@@ -994,7 +994,7 @@
 		<div class="tag">
 			<ul class="clearfix">
 				<li class="cl-4 lh-25 pd-0500 wd-25p fl"><img
-					src="img/zheng.png" width="50"
+					src="/statics/img/zheng.png" width="50"
 					height="50" class="fl mr-10 defaultlazy" />
 					<div class="fl">
 						<p class="fs-24 ">全场正品</p>
@@ -1002,7 +1002,7 @@
 					</div>
 					<div class="cb"></div></li>
 				<li class="cl-4 lh-25 pd-0500 wd-25p fl"><img
-					src="img/sheng.png" alt=""
+					src="/statics/img/sheng.png" alt=""
 					width="50" height="50" class="fl mr-10 defaultlazy" />
 					<div class="fl">
 						<p class="fs-24 ">全场满59包邮</p>
@@ -1010,7 +1010,7 @@
 					</div>
 					<div class="cb"></div></li>
 				<li class="cl-4 lh-25 pd-0500 wd-25p fl"><img
-					src="img/huo.png" alt=""
+					src="/statics/img/huo.png" alt=""
 					width="50" height="50" class="fl mr-10 defaultlazy" />
 					<div class="fl">
 						<p class="fs-24 ">门店自取</p>
@@ -1018,7 +1018,7 @@
 					</div>
 					<div class="cb"></div></li>
 				<li class="cl-4 lh-25 pd-0500 wd-25p fl"><img
-					src="img/hao.png" alt=""
+					src="/statics/img/hao.png" alt=""
 					width="50" height="50" class="fl mr-10 defaultlazy" />
 					<div class="fl">
 						<p class="fs-24 ">售后无忧</p>
@@ -1032,10 +1032,10 @@
 		<div class="copyright">
 			<div class="wd-605 ma cl-9 ta-ct" style="width: 656px;">
 				<div class="fl lh-50">
-					<img src="img/jingcha.png"
+					<img src="/statics/img/jingcha.png"
 						alt="" height="36" class="va-md pd-0005 defaultlazy"> <a
 						href="/system/refer.php" target="_blank"> <img
-						src="img/huizhang.png" alt=""
+						src="/statics/img/huizhang.png" alt=""
 						height="36" class="va-md pd-0005 defaultlazy"> </a>
 				</div>
 				<div class="fl pd-0010">
@@ -1049,11 +1049,11 @@
 					<a
 						href="#"
 						target="_blank"><img
-						src="img/knetSealLogo.png"
+						src="/statics/img/knetSealLogo.png"
 						alt="" height="30" class="va-md pd-0005 defaultlazy">
 					</a> <a href="#"
 						target="_blank"><img
-						src="img/cert.png" alt=""
+						src="/statics/img/cert.png" alt=""
 						height="30" class="va-md pd-0005 defaultlazy">
 					</a>
 				</div>
@@ -1065,40 +1065,41 @@
 	<script type="text/javascript">
 	
 	$("#cid").click(function(){
-	
-	$("#bkid").html(" ");
-	
-	var url="AjaxServlet";
+		$("#bkid").html(" ");
+		var url="/book/ajaxServlet.html";
 		$.get(url,null,function(data){
-		for ( var int = 0; int < data.length; int++) {
-			
-		  var tableHtml="<li class='wd-20p ta-ct fl scale-box' style='float:left;'>";
-			tableHtml+="<div class='pd-5 mouseenter mouseleave bd-2-f'>";
-			tableHtml+="<div class='scale oh pd-20 pr'>";
-			tableHtml+="<a class='db square-box one-one bgimg lazyload hidden' href='BookServlet?usid="+${uid.uid}+"&bookid="+data[int].bookid+"&opr=xq'>";
-			tableHtml+="<img src='"+data[int].bookimg+"' />";
-			tableHtml+="</a>";
-			tableHtml+="</div>";						
-			tableHtml+="<div class='context'>";							
-			tableHtml+="<a class='db cl-6 ht-36 lh-18 oh mt-2' href='BookServlet?bid=101266135&opr=xq'>";
-			tableHtml+=data[int].bookname;
-			tableHtml+="</a>";
-			tableHtml+="<p class='lh-40'>";									
-			tableHtml+="<span class='fs-16 cl-rd-l'>¥";
-			tableHtml+=data[int].price;
-			tableHtml+="</span>";	
-			tableHtml+="<span class='cl-9'>|";								
-			tableHtml+="</span>";						
-			tableHtml+="<del class='fs-12 cl-9'>¥";
-				tableHtml+=data[int].discount;
-			tableHtml+="</del>";									
-			tableHtml+="</p>";
-			tableHtml+="</div>";							
-			tableHtml+="</div>";						
-			tableHtml+="</li>";	
-				$("#bkid").append(tableHtml);
-		}
-		
+			if(data!=null){
+				
+				/*alert("=====>tostring()"+data.toString());*/
+				for (var i = 0;i<data.length;i++) {
+					var tableHtml="<li class='wd-20p ta-ct fl scale-box' style='float:left;'>";
+					tableHtml+="<div class='pd-5 mouseenter mouseleave bd-2-f'>";
+					tableHtml+="<div class='scale oh pd-20 pr'>";
+					tableHtml+="<a class='db square-box one-one bgimg lazyload hidden' href='/book/book.html?bookid="+data[i].bookid+"'>";
+					tableHtml+="<img src='/statics/"+data[i].bookimg+"' name='"+data[i].bookid+"'/>";
+					tableHtml+="</a>";
+					tableHtml+="</div>";            
+					tableHtml+="<div class='context'>";
+					tableHtml+="<a class='db cl-6 ht-36 lh-18 oh mt-2' href='/book/book.html?bookid='"+data[i].bookid;
+					tableHtml+=">";
+					tableHtml+=data[i].bookname;
+					tableHtml+="</a>";
+					tableHtml+="<p class='lh-40'>";
+					tableHtml+="<span class='fs-16 cl-rd-l'>¥";
+					tableHtml+=data[i].price;
+					tableHtml+="</span>";
+					tableHtml+="<span class='cl-9'>|";
+					tableHtml+="</span>";
+					tableHtml+="<del class='fs-12 cl-9'>¥";
+					tableHtml+=data[i].discount;
+					tableHtml+="</del>";
+					tableHtml+="</p>";
+					tableHtml+="</div>";
+					tableHtml+="</div>";
+					tableHtml+="</li>";
+                    $("#bkid").append(tableHtml);
+				}
+			}
 		},"json");
 	
 	});

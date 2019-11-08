@@ -4,5 +4,13 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="cn.bdqn.dao.orders.OrdersMapper">
-
+    <insert id="addOrder" parameterType="orders">
+		INSERT INTO orders VALUE(NULL,#{userid},#{totoalMoney},NOW(),0,#{address},#{phone})
+	</insert>
+    <insert id="addOrderitem">
+		INSERT INTO orderitem VALUE(#{odrid},#{bid},#{bname},#{bimg},#{num},#{price})
+	</insert>
+    <select id="getOrderByuid" resultType="orders">
+		SELECT * FROM orders WHERE userid=#{uid}
+	</select>
 </mapper>

@@ -2,12 +2,37 @@
 	margin: 0px;
 	padding: 0px;
 }
-/*ÉèÖÃ¾ÓÖĞ*/
+/*è®¾ç½®å¼¹æ¡†*/
+#bo{
+	z-index: 2;
+	position: relative;
+}
+#mes {
+	/*è®¾ç½®å®šä½*/
+	position: absolute;
+	top: 45%;
+	left: 45%;
+	background: #2C3031;
+	/*opacity: 0.1;*/
+	color: white;
+	font-weight: bold;
+	padding: 15px;
+	width: auto;
+	text-align: center;
+	/*å±‚çº§ã€éšè—*/
+	z-index: 9;
+	display: none;
+}
+
+
+
+
+/*è®¾ç½®å±…ä¸­*/
 #body {
 	padding: 0px 5%;
 }
 
-/*Í·²¿*/
+/*å¤´éƒ¨*/
 
 #head {
 	width: 100%;
@@ -25,7 +50,7 @@
 }
 
 
-/*ÎÄ×Ö*/
+/*æ–‡å­—*/
 
 #text_one {
 	padding: 1% 0px;
@@ -42,7 +67,7 @@
 }
 
 
-/*¹ºÎï³µÍ¼±ê*/
+/*è´­ç‰©è½¦å›¾æ ‡*/
 
 #car {
 	width: 100%;
@@ -51,14 +76,14 @@
 	border: 0px solid black;
 	text-align: center;
 	font-size: 18px;
-	/*¸¸¼¶ relative¶¨Î»*/
+	/*çˆ¶çº§ relativeå®šä½*/
 	position: relative;
 }
 
 .car_one {
-	/* absolute ¶¨Î» Ê¹ÄÚÈİ¾ÓÖĞ*/
+	/* absolute å®šä½ ä½¿å†…å®¹å±…ä¸­*/
 	width: 100%;
-	height: 30%;
+	height: 28%;
 	position: absolute;
 	top: 40%;
 	border: 0px solid black;
@@ -69,7 +94,7 @@
 }
 
 
-/*µÇÂ¼ °´Å¥*/
+/*ç™»å½• æŒ‰é’®*/
 
 .login,
 .continue {
@@ -86,7 +111,7 @@
 }
 
 
-/*¼ÌĞø¹ä °´Å¥*/
+/*ç»§ç»­é€› æŒ‰é’®*/
 
 .continue {
 	color: #62C7EF;
@@ -95,7 +120,7 @@
 }
 
 
-/*¹ºÎï³µÍ·²¿¿ªÊ¼*/
+/*è´­ç‰©è½¦å¤´éƒ¨å¼€å§‹*/
 
 .tr_head {
 	background-color: #F3F3F3;
@@ -115,7 +140,7 @@ ul li {
 }
 
 
-/*ÉèÖÃÉÌÆ·±ß¿ò*/
+/*è®¾ç½®å•†å“è¾¹æ¡†*/
 
 .tr_rows td {
 	border-bottom: 1px solid #E8E8E8;
@@ -128,13 +153,13 @@ ul li {
 .tr_rows td:last-of-type {
 	border-right: 1px solid #E8E8E8;
 }
-/*Ô­¼Û*/
+/*åŸä»·*/
 .dere {
 	text-decoration: line-through;
 	color: #A6A8A8;
 	font-size: 14px;
 }
-/*ÊıÁ¿*/
+/*æ•°é‡*/
 .add,.minus,
 .num_input {
 	border: 1px solid #999999;
@@ -144,30 +169,29 @@ ul li {
 	padding: 12px;
 	margin-right: 0px;
 }
-/*ÉèÖÃ  pointer*/
+/*è®¾ç½®  pointer*/
 .add,.minus,
 .move,.allCheckBox,
 .del,.cart_td_1,
 .final {
 	cursor: pointer;
 }
-/*¼õºÅ*/
+/*å‡å·*/
 .minus {
 	border-right: none;
-	margin-left: ;
 }
-/*¼ÓºÅ*/
+/*åŠ å·*/
 .add {
 	border-left: none;
 }
 
 
-/*È¥³ıa±êÇ©ÏÂ»®Ïß*/
+/*å»é™¤aæ ‡ç­¾ä¸‹åˆ’çº¿*/
 a {
 	text-decoration: none;
 	color: black;
 }
-/*ÉèÖÃ¼Û¸ñ×ÖÌåÎªºìÉ«*/
+/*è®¾ç½®ä»·æ ¼å­—ä½“ä¸ºçº¢è‰²*/
 .total_money span {
 	color: red;
 }
@@ -185,7 +209,7 @@ a {
 #total_price {
 	font-size: 30px;
 }
-/*È¥½áËã*/
+/*å»ç»“ç®—*/
 .final {
 	width: 7%;
 	padding: 1% 0px;

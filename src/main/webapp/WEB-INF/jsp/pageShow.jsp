@@ -39,15 +39,15 @@
 
 				<c:choose>
 					<c:when test="${isok==false }">
-						<a class="hover cl-6" href="login.jsp" title="登录">登录</a>
+						<a class="hover cl-6" href="/user/login.html" title="登录">登录</a>
 						<span class="pd-0005 cl-c">|</span>
-						<a class="mr-30 hover cl-6" href="registered.jsp" title="免费注册">免费注册</a>
+						<a class="mr-30 hover cl-6" href="/user/registered.html" title="免费注册">免费注册</a>
 					</c:when>
 					<c:otherwise>
 					欢迎：${uid.uname}
 					<span class="pd-0005 cl-c">|</span>
-						<a class="mr-30 hover cl-6" href="BookServlet?opr=out&isok=false"
-							title="退出登陆">退出登陆</a>
+						<a class="mr-30 hover cl-6" href="/user/loginout.html?url=pageShow"
+							title="退出登录">退出登录</a>
 					</c:otherwise>
 					</c:choose>
 					<a class="hover cl-6" href="/download.php" target="_blank"
@@ -55,7 +55,7 @@
 						class="icon-phone-line cl-bl-l fs-16 tp-3 mr-2 pr"></span>下载博库APP</a>
 				</p>
 				<p class="fr">
-					<a class="hover fr cl-6" href="javascript:void()"
+					<a class="hover fr cl-6" href="javascript:void(0);"
 						onclick="openQimooChat();" title="联系客服">联系客服</a> <span
 						class="pd-0015 cl-c fr">|</span> <a class="hover fr cl-6"
 						href="/user/shop/settings.php" target="_blank" title="店铺管理">店铺管理</a>
@@ -68,8 +68,8 @@
 					</label>
 					<div class="acount">
 						<a class="hover cl-6 to-hd" href="#" target="_blank" title="">我的博库</a>
-						<a class="hover cl-6 to-hd" href="#"
-							target="_blank" title="">我的订单</a> <a class="hover cl-6 to-hd"
+						<a class="hover cl-6 to-hd" href="/order/orderItem.html?usid=${uid.uid}"
+						   target="_blank" title="">我的订单</a> <a class="hover cl-6 to-hd"
 							href="#" target="_blank" title="">我的优惠券</a> <a
 							class="hover cl-6 to-hd" href="#"
 							target="_blank" title="">我的收藏</a> <a class="hover cl-6 to-hd"
@@ -92,8 +92,8 @@
 		<div class="wd-1200 ma">
 			<div class="search-container" id="search-container">
 				<div class="logo-container">
-					<a class="db logo-box fl" href="Mnag.jsp"> <img
-						src="img/logo.png" alt=""
+					<a class="db logo-box fl" href="/book/Mnag.html"> <img
+						src="/statics/img/logo.png" alt=""
 						width="220" class="db" alt="logo" draggable="false" /> </a>
 					<!-- 搜索 -->
 					<div class="fl">
@@ -125,7 +125,7 @@
 					<div class="fr ta-rt mt-8 cart">
 						<!-- uid=0当没有登陆的时候	-->
 						<a class="fs-16 bd-1-d br-4 pd-0610 cart-box"
-							href="UserBooksServlet?opr=gwc&usid=${uid.uid}"> <span
+							href="/car/userBooks.html?usid=${uid.uid}"> <span
 							class="icon-cart-block mr-10 cl-a9 pr tp-3 fs-18"></span>
 							<span class="mr-5">购物车</span> <label
 							class="cl-f fw-nm br-10 cart_num"></label> </a>
@@ -136,7 +136,7 @@
 			<!-- 分类 -->
 			<div class="nav-box">
 				<div class="type fl public">
-					<a target="_blank" class="db cl-f title" href="Classification.jsp"><span
+					<a target="_blank" class="db cl-f title" href="/category/classification.html"><span
 						class="icon-type-line cl-f mr-10 pr tp-2"></span>所有商品分类</a>
 
 				</div>
@@ -499,7 +499,7 @@
 						href="//www.bookuu.com/search.php?k=&cid=10&showtype=0">图书</a>> <a
 						class="mr-10" data-cid="1017"
 						href="//www.bookuu.com/search.php?k=&cid=1017&showtype=0">${categoryname }</a>
-					共<span class="cl-bl-l">${bookPage.totalSize }</span>件商品
+					共<span class="cl-bl-l">${pu.totalSize }</span>件商品
 				</p>
 				<div class="cb"></div>
 			</div>
@@ -519,12 +519,12 @@
 									<div class="wd-180 fl mr-20 pr">
 									<input vlaue="${li.bookid}" id="myid" style="visibility: hidden;"/>
 										<div class="oh scale pd-10" id="xqxs">
-											<img alt=""  src="${li.bookimg}">
+											<img alt=""  src="/statics/${li.bookimg}">
 										</div>
 									</div>
 									<div class="wd-640 fl" style="width: 640px;">
 										<a class="db fs-16 lh-30 to-hd fw-bd hover" target="_blank"
-											href="BookServlet?usid=${uid.uid }&bookid=${li.bookid}&opr=xq">${li.bookname}</a>
+											href="/book/book.html?bookid=${li.bookid}">${li.bookname}</a>
 										<div class="lh-30">
 											<span class="fs-21 cl-rd-l fw-bd mr-20">¥${li.price }</span>
 											<del class="cl-9 mr-10">¥${li.discount }</del>
@@ -570,7 +570,7 @@
 										<div class="fl">
 											<ul>
 											<c:if test="${pu.pageNo!=1}">
-												<li class="fl"><a class="disabled" href='PageServlet?usid=${uid.uid}$pageNo=${pu.pageNo-1 }'>« 上一页</a>
+												<li class="fl"><a class="disabled" href='/book/page.html?pageNo=${pu.pageNo-1 }&opr=pge'>« 上一页</a>
 												</li>
 												</c:if>
 												<li class="fl">
@@ -578,7 +578,7 @@
 												</li>
 												<c:if test="${pu.pageNo!=pu.totalPage}">
 												<li class='fl'><a
-													href='PageServlet?usid=${uid.uid}&pageNo=${pu.pageNo+1 }'
+													href='/book/page.html?pageNo=${pu.pageNo+1 }&opr=pge'
 													class='next'>下一页 »</a></li>
 												<li class="cb"></li>
 												</c:if>
@@ -602,7 +602,7 @@
 									<div class="oh scale pd-10">
 										<a class="db square-box one-one bgimg lazyload hidden"
 											target="_blank"
-											href="#"><img src="img/2018122230327901-14911.jpg"/></a>
+											href="#"><img src="/statics/img/2018122230327901-14911.jpg"/></a>
 									</div>
 									<div class="context pd-0020">
 										<a class="db ht-36 lh-18 oh cl-6" target="_blank"
@@ -1362,7 +1362,7 @@
 		<div class="tag">
 			<ul class="clearfix">
 				<li class="cl-4 lh-25 pd-0500 wd-25p fl"><img
-					src="img/zheng.png" width="50"
+					src="/statics/img/zheng.png" width="50"
 					height="50" class="fl mr-10 defaultlazy" />
 					<div class="fl">
 						<p class="fs-24 ">全场正品</p>
@@ -1370,7 +1370,7 @@
 					</div>
 					<div class="cb"></div></li>
 				<li class="cl-4 lh-25 pd-0500 wd-25p fl"><img
-					src="img/sheng.png" alt=""
+					src="/statics/img/sheng.png" alt=""
 					width="50" height="50" class="fl mr-10 defaultlazy" />
 					<div class="fl">
 						<p class="fs-24 ">全场满59包邮</p>
@@ -1378,7 +1378,7 @@
 					</div>
 					<div class="cb"></div></li>
 				<li class="cl-4 lh-25 pd-0500 wd-25p fl"><img
-					src="img/huo.png" alt=""
+					src="/statics/img/huo.png" alt=""
 					width="50" height="50" class="fl mr-10 defaultlazy" />
 					<div class="fl">
 						<p class="fs-24 ">门店自取</p>
@@ -1386,7 +1386,7 @@
 					</div>
 					<div class="cb"></div></li>
 				<li class="cl-4 lh-25 pd-0500 wd-25p fl"><img
-					src="img/hao.png" alt=""
+					src="/statics/img/hao.png" alt=""
 					width="50" height="50" class="fl mr-10 defaultlazy" />
 					<div class="fl">
 						<p class="fs-24 ">售后无忧</p>
@@ -1400,10 +1400,10 @@
 		<div class="copyright">
 			<div class="wd-605 ma cl-9 ta-ct" style="width: 656px;">
 				<div class="fl lh-50">
-					<img src="img/jingcha.png"
+					<img src="/statics/img/jingcha.png"
 						alt="" height="36" class="va-md pd-0005 defaultlazy"> <a
 						href="/system/refer.php" target="_blank"> <img
-						src="img/huizhang.png" alt=""
+						src="/statics/img/huizhang.png" alt=""
 						height="36" class="va-md pd-0005 defaultlazy"> </a>
 				</div>
 				<div class="fl pd-0010">
@@ -1417,11 +1417,11 @@
 					<a
 						href="#"
 						target="_blank"><img
-						src="img/knetSealLogo.png"
+						src="/statics/img/knetSealLogo.png"
 						alt="" height="30" class="va-md pd-0005 defaultlazy">
 					</a> <a href="#"
 						target="_blank"><img
-						src="img/cert.png" alt=""
+						src="/statics/img/cert.png" alt=""
 						height="30" class="va-md pd-0005 defaultlazy">
 					</a>
 				</div>

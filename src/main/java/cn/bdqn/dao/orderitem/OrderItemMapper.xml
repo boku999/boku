@@ -4,5 +4,11 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="cn.bdqn.dao.orderitem.OrderItemMapper">
-
+    <select id="getOrderItemByuid" resultType="orderitem">
+		SELECT * FROM orders AS os JOIN orderitem AS ot ON os.`orderid`=ot.`ordersID`
+		 WHERE os.userid=#{uid}
+	</select>
+    <select id="getorderitembyorid" resultType="orderitem">
+		SELECT * FROM orderitem
+	</select>
 </mapper>

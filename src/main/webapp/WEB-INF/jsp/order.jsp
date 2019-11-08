@@ -10,20 +10,20 @@
 	content="博库网品种丰富的中文网上书店，160万种图书在线热销！图书、音像、软件正品行货超低折扣，全场免邮，支持全国货到付款。" />
 <meta name="keywords" content="博库网,博库,博库书城,网上书店,网上买书,图书,影视,音像,软件" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<link rel="stylesheet" type="text/css" href="css/myframe.css" />
-<link rel="stylesheet" type="text/css" href="css/public.css" />
-<link rel="stylesheet" type="text/css" href="css/component.css" />
-<link rel="stylesheet" type="text/css" href="css/module.css" />
+<link rel="stylesheet" type="text/css" href="/statics/css/myframe.css" />
+<link rel="stylesheet" type="text/css" href="/statics/css/public.css" />
+<link rel="stylesheet" type="text/css" href="/statics/css/component.css" />
+<link rel="stylesheet" type="text/css" href="/statics/css/module.css" />
 
 <!-- 字体图标 -->
-<link rel="stylesheet" type="text/css" href="css/iconfonts.css" />
+<link rel="stylesheet" type="text/css" href="/statics/css/iconfonts.css" />
 
-<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
-<script type="text/javascript" src="js/component.js"></script>
+<script type="text/javascript" src="/statics/js/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="/statics/js/component.js"></script>
 
 <!-- FlexSlider -->
-<link rel="stylesheet" type="text/css" href="css/flexslider.css" />
-<script type="text/javascript" src="js/flexslider.js"></script>
+<link rel="stylesheet" type="text/css" href="/statics/css/flexslider.css" />
+<script type="text/javascript" src="/statics/js/flexslider.js"></script>
 <meta name="baidu-site-verification" content="s3QQaARPSL" />
 <title>订单确认-博库体验店</title>
 
@@ -188,15 +188,15 @@
 				<p class="fl">
 					<c:choose>
 						<c:when test="${isok==false }">
-							<a class="hover cl-6" href="login.jsp" title="登录">登录</a>
+							<a class="hover cl-6" href="/user/login.html" title="登录">登录</a>
 							<span class="pd-0005 cl-c">|</span>
-							<a class="mr-30 hover cl-6" href="registered.jsp" title="免费注册">免费注册</a>
+							<a class="mr-30 hover cl-6" href="/user/registered.html" title="免费注册">免费注册</a>
 						</c:when>
 						<c:otherwise>
 					欢迎：${uid.uname}
 					<span class="pd-0005 cl-c">|</span>
-							<a class="mr-30 hover cl-6" href="BookServlet?opr=out&isok=false"
-								title="退出登陆">退出登陆</a>
+							<a class="mr-30 hover cl-6" href="/user/loginout.html?url=order"
+								title="退出登录">退出登录</a>
 						</c:otherwise>
 					</c:choose>
 					<a class="hover cl-6" href="/download.php" target="_blank"
@@ -204,7 +204,7 @@
 						class="icon-phone-line cl-bl-l fs-16 tp-3 mr-2 pr"></span>下载博库APP</a>
 				</p>
 				<p class="fr">
-					<a class="hover fr cl-6" href="javascript:void()"
+					<a class="hover fr cl-6" href="javascript:void(0);"
 						onclick="openQimooChat();" title="联系客服">联系客服</a> <span
 						class="pd-0015 cl-c fr">|</span> <a class="hover fr cl-6"
 						href="/user/shop/settings.php" target="_blank" title="店铺管理">店铺管理</a>
@@ -233,7 +233,7 @@
 		</div>
 		<div class="wd-1200 ma bb-1-e8">
 			<div class="logo">
-				<a class="db logo-box fl" href="Mnag.jsp"> <img src="img/logo.png" />
+				<a class="db logo-box fl" href="/book/Mnag.html"> <img src="/statics/img/logo.png" />
 				</a>
 				<div class="cb"></div>
 			</div>
@@ -484,7 +484,7 @@
 						<ul class="wd-1180 pd-10 lh-100 bt-1-e8" style="font-size:15px;">
 							<li class="wd-550 fl">
 								<div class="fl wd-100">
-									<img src="${li.bookimg}" width="80" height="80" />
+									<img src="/statics/${li.bookimg}" width="80" height="80" />
 								</div>
 								<div class="fr wd-440">
 									<p class="minh-60 lh-20">${li.bookname}</p>
@@ -565,7 +565,7 @@
 		<div class="tag">
 			<ul class="clearfix">
 				<li class="cl-4 lh-25 pd-0500 wd-25p fl"><img
-					src="img/zheng.png" width="50" height="50"
+					src="/statics/img/zheng.png" width="50" height="50"
 					class="fl mr-10 defaultlazy" />
 					<div class="fl">
 						<p class="fs-24 ">全场正品</p>
@@ -573,21 +573,21 @@
 					</div>
 					<div class="cb"></div></li>
 				<li class="cl-4 lh-25 pd-0500 wd-25p fl"><img
-					src="img/sheng.png" alt="" width="50" height="50"
+					src="/statics/img/sheng.png" alt="" width="50" height="50"
 					class="fl mr-10 defaultlazy" />
 					<div class="fl">
 						<p class="fs-24 ">全场满59包邮</p>
 						<p>惊喜不断·让利多多</p>
 					</div>
 					<div class="cb"></div></li>
-				<li class="cl-4 lh-25 pd-0500 wd-25p fl"><img src="img/huo.png"
+				<li class="cl-4 lh-25 pd-0500 wd-25p fl"><img src="/statics/img/huo.png"
 					alt="" width="50" height="50" class="fl mr-10 defaultlazy" />
 					<div class="fl">
 						<p class="fs-24 ">门店自取</p>
 						<p>就近取货·方式灵活</p>
 					</div>
 					<div class="cb"></div></li>
-				<li class="cl-4 lh-25 pd-0500 wd-25p fl"><img src="img/hao.png"
+				<li class="cl-4 lh-25 pd-0500 wd-25p fl"><img src="/statics/img/hao.png"
 					alt="" width="50" height="50" class="fl mr-10 defaultlazy" />
 					<div class="fl">
 						<p class="fs-24 ">售后无忧</p>
@@ -601,10 +601,10 @@
 		<div class="copyright">
 			<div class="wd-605 ma cl-9 ta-ct" style="width: 656px;">
 				<div class="fl lh-50">
-					<img src="img/jingcha.png" alt="" height="36"
+					<img src="/statics/img/jingcha.png" alt="" height="36"
 						class="va-md pd-0005 defaultlazy"> <a
 						href="/system/refer.php" target="_blank"> <img
-						src="img/huizhang.png" alt="" height="36"
+						src="/statics/img/huizhang.png" alt="" height="36"
 						class="va-md pd-0005 defaultlazy"> </a>
 				</div>
 				<div class="fl pd-0010">
@@ -613,9 +613,9 @@
 					<a class="copyRightA" href="#" target="_blank">出版物经营许可证新出发浙批字第300411号</a>
 				</div>
 				<div class="fl lh-50">
-					<a href="#" target="_blank"><img src="img/knetSealLogo.png"
+					<a href="#" target="_blank"><img src="/statics/img/knetSealLogo.png"
 						alt="" height="30" class="va-md pd-0005 defaultlazy"> </a> <a
-						href="#" target="_blank"><img src="img/cert.png" alt=""
+						href="#" target="_blank"><img src="/statics/img/cert.png" alt=""
 						height="30" class="va-md pd-0005 defaultlazy"> </a>
 				</div>
 				<div class="cb"></div>

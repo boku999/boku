@@ -42,15 +42,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 					<c:choose>
 					<c:when test="${isok==false }">
-						<a class="hover cl-6" href="login.jsp" title="登录">登录</a>
+						<a class="hover cl-6" href="/user/login.html" title="登录">登录</a>
 						<span class="pd-0005 cl-c">|</span>
-						<a class="mr-30 hover cl-6" href="registered.jsp" title="免费注册">免费注册</a>
+						<a class="mr-30 hover cl-6" href="/user/registered.html" title="免费注册">免费注册</a>
 					</c:when>
 					<c:otherwise>
 					欢迎：${uid.uname}
 					<span class="pd-0005 cl-c">|</span>
-						<a class="mr-30 hover cl-6" href="BookServlet?opr=out&isok=false"
-							title="退出登陆">退出登陆</a>
+						<a class="mr-30 hover cl-6" href="/user/loginout.html?url=OrderShow"
+							title="退出登录">退出登录</a>
 					</c:otherwise>
 					</c:choose>
 					<a class="hover cl-6" href="/download.php" target="_blank"
@@ -95,8 +95,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div class="wd-1200 ma">
 			<div class="search-container" id="search-container">
 				<div class="logo-container">
-					<a class="db logo-box fl" href="Mnag.jsp"> <img
-						src="img/logo.png" alt=""
+					<a class="db logo-box fl" href="/book/Mnag.html"> <img
+						src="/statics/img/logo.png" alt=""
 						width="220" class="db" alt="logo" draggable="false" /> </a>
 					<!-- 搜索 -->
 					<div class="fl">
@@ -569,7 +569,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div class="tag">
 			<ul class="clearfix">
 				<li class="cl-4 lh-25 pd-0500 wd-25p fl"><img
-					src="img/zheng.png" width="50"
+					src="/statics/img/zheng.png" width="50"
 					height="50" class="fl mr-10 defaultlazy" />
 					<div class="fl">
 						<p class="fs-24 ">全场正品</p>
@@ -577,7 +577,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</div>
 					<div class="cb"></div></li>
 				<li class="cl-4 lh-25 pd-0500 wd-25p fl"><img
-					src="img/sheng.png" alt=""
+					src="/statics/img/sheng.png" alt=""
 					width="50" height="50" class="fl mr-10 defaultlazy" />
 					<div class="fl">
 						<p class="fs-24 ">全场满59包邮</p>
@@ -585,7 +585,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</div>
 					<div class="cb"></div></li>
 				<li class="cl-4 lh-25 pd-0500 wd-25p fl"><img
-					src="img/huo.png" alt=""
+					src="/statics/img/huo.png" alt=""
 					width="50" height="50" class="fl mr-10 defaultlazy" />
 					<div class="fl">
 						<p class="fs-24 ">门店自取</p>
@@ -593,7 +593,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</div>
 					<div class="cb"></div></li>
 				<li class="cl-4 lh-25 pd-0500 wd-25p fl"><img
-					src="img/hao.png" alt=""
+					src="/statics/img/hao.png" alt=""
 					width="50" height="50" class="fl mr-10 defaultlazy" />
 					<div class="fl">
 						<p class="fs-24 ">售后无忧</p>
@@ -607,10 +607,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div class="copyright">
 			<div class="wd-605 ma cl-9 ta-ct" style="width: 656px;">
 				<div class="fl lh-50">
-					<img src="img/jingcha.png"
+					<img src="/statics/img/jingcha.png"
 						alt="" height="36" class="va-md pd-0005 defaultlazy"> <a
 						href="/system/refer.php" target="_blank"> <img
-						src="img/huizhang.png" alt=""
+						src="/statics/img/huizhang.png" alt=""
 						height="36" class="va-md pd-0005 defaultlazy"> </a>
 				</div>
 				<div class="fl pd-0010">
@@ -624,11 +624,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<a
 						href="#"
 						target="_blank"><img
-						src="img/knetSealLogo.png"
+						src="/statics/img/knetSealLogo.png"
 						alt="" height="30" class="va-md pd-0005 defaultlazy">
 					</a> <a href="#"
 						target="_blank"><img
-						src="img/cert.png" alt=""
+						src="/statics/img/cert.png" alt=""
 						height="30" class="va-md pd-0005 defaultlazy">
 					</a>
 				</div>

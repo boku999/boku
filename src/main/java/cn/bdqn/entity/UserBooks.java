@@ -1,6 +1,6 @@
 package cn.bdqn.entity;
 /*
- * �û�ͼ���
+ * 用户图书表
  */
 public class UserBooks {
 

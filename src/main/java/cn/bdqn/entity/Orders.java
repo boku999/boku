@@ -16,8 +16,16 @@ public class Orders {
 	private String orderDate;//创建订单时间
 	private String state;//订单状态
 	private String address;//地址id
+	private String phone;//电话
 
-	
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
 	private List<OrderItem> blist=new ArrayList<OrderItem>();
 	
 	

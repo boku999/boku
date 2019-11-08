@@ -10,29 +10,31 @@
 	content="博库网品种丰富的中文网上书店，160万种图书在线热销！图书、音像、软件正品行货超低折扣，全场免邮，支持全国货到付款。" />
 <meta name="keywords" content="博库网,博库,博库书城,网上书店,网上买书,图书,影视,音像,软件" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<link rel="stylesheet" href="css/MyCss01.css" />
-<link rel="stylesheet" href="css/MyCss02.css" />
-<link rel="stylesheet" href="css/MyCss03.css" />
-<link rel="stylesheet" href="css/MyCss04.css" />
+<link rel="stylesheet" href="/statics/css/MyCss01.css" />
+<link rel="stylesheet" href="/statics/css/MyCss02.css" />
+<link rel="stylesheet" href="/statics/css/MyCss03.css" />
+<link rel="stylesheet" href="/statics/css/MyCss04.css" />
+    <link rel="stylesheet" href="/statics/css/car.css"/>
 
 
 <!-- 字体图标 -->
-<link rel="stylesheet" href="css/MyCss05.css" />
+<link rel="stylesheet" href="/statics/css/MyCss05.css" />
 
-<script type="text/javascript" src="js/MyJs01.js"></script>
-<script type="text/javascript" src="js/MyJs02.js"></script>
+<script type="text/javascript" src="/statics/js/MyJs01.js"></script>
+<script type="text/javascript" src="/statics/js/MyJs02.js"></script>
 
 <!-- FlexSlider -->
-<link rel="stylesheet" href="css/MyCss06.css" />
-<script type="text/javascript" src="js/MyJs03.js"></script>
+<link rel="stylesheet" href="/statics/css/MyCss06.css" />
+<script type="text/javascript" src="/statics/js/MyJs03.js"></script>
 <meta name="baidu-site-verification" content="s3QQaARPSL" />
 
-<title id="www_pc_title">二手时间-四月物语</title>
-<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
-<link rel="stylesheet" href="css/jcountdown.css" type="text/css"></link>
+<title id="www_pc_title">图书详情-博库体验店</title>
+<script type="text/javascript" src="/statics/js/jquery-1.12.4.js"></script>
+<link rel="stylesheet" href="/statics/css/jcountdown.css" type="text/css"></link>
 </head>
 <body>
-
+<div id="mes"></div>
+<div id="bo">
 	<!-- 头部 -->
 	<div class="header bc-f">
 		<!-- 顶部 小标题  登录信息-->
@@ -42,15 +44,15 @@
 
 					<c:choose>
 					<c:when test="${isok==false }">
-						<a class="hover cl-6" href="login.jsp" title="登录">登录</a>
-						<span class="pd-0005 cl-c">|</span>
-						<a class="mr-30 hover cl-6" href="registered.jsp" title="免费注册">免费注册</a>
+						<a class="hover cl-6" href="/user/login.html" title="登录">登录</a>
+                        <span class="pd-0005 cl-c">|</span>
+						<a class="mr-30 hover cl-6" href="/user/registered.html" title="免费注册">免费注册</a>
 					</c:when>
 					<c:otherwise>
 					欢迎：${uid.uname}
 					<span class="pd-0005 cl-c">|</span>
-						<a class="mr-30 hover cl-6" href="BookServlet?opr=out&isok=false"
-							title="退出登陆">退出登陆</a>
+						<a class="mr-30 hover cl-6" href="/user/loginout.html?url=detail"
+							title="退出登录">退出登录</a>
 					</c:otherwise>
 					</c:choose>
 					<a class="hover cl-6" href="#" target="_blank"
@@ -58,7 +60,7 @@
 						class="icon-phone-line cl-bl-l fs-16 tp-3 mr-2 pr"></span>下载博库APP</a>
 				</p>
 				<p class="fr">
-					<a class="hover fr cl-6" href="javascript:void()"
+					<a class="hover fr cl-6" href="javascript:void(0);"
 						onclick="openQimooChat();" title="联系客服">联系客服</a> <span
 						class="pd-0015 cl-c fr">|</span> <a class="hover fr cl-6"
 						href="/user/shop/settings.php" target="_blank" title="店铺管理">店铺管理</a>
@@ -71,8 +73,8 @@
 					</label>
 					<div class="acount">
 						<a class="hover cl-6 to-hd" href="#" target="_blank" title="">我的博库</a>
-						<a class="hover cl-6 to-hd" href="#"
-							 title="">我的订单</a> <a class="hover cl-6 to-hd"
+						<a class="hover cl-6 to-hd" href="/order/orderItem.html?usid=${uid.uid}"
+						   target="_blank" title="">我的订单</a> <a class="hover cl-6 to-hd"
 							href="#" target="_blank" title="">我的优惠券</a> <a
 							class="hover cl-6 to-hd" href="#"
 							target="_blank" title="">我的收藏</a> <a class="hover cl-6 to-hd"
@@ -95,8 +97,8 @@
 		<div class="wd-1200 ma">
 			<div class="search-container" id="search-container">
 				<div class="logo-container">
-					<a class="db logo-box fl" href="Mnag.jsp"> <img
-						src="img/logo.png" alt=""
+					<a class="db logo-box fl" href="/book/Mnag.html"> <img
+						src="/statics/img/logo.png" alt=""
 						width="220" class="db" alt="logo" draggable="false" /> </a>
 					<!-- 搜索 -->
 					<div class="fl">
@@ -128,7 +130,7 @@
 					<div class="fr ta-rt mt-8 cart">
 						<!-- uid=0当没有登陆的时候	-->
 						<a class="fs-16 bd-1-d br-4 pd-0610 cart-box"
-							href="UserBooksServlet?opr=gwc&usid=${uid.uid}"> <span
+							href="/car/userBooks.html?usid=${uid.uid}"> <span
 							class="icon-cart-block mr-10 cl-a9 pr tp-3 fs-18"></span>
 							<span class="mr-5">购物车</span> <label
 							class="cl-f fw-nm br-10 cart_num"></label> </a>
@@ -139,7 +141,7 @@
 			<!-- 分类 -->
 			<div class="nav-box">
 				<div class="type fl public">
-					<a target="_blank" class="db cl-f title" href="Classification.jsp"><span
+					<a target="_blank" class="db cl-f title" href="/category/classification.html"><span
 						class="icon-type-line cl-f mr-10 pr tp-2"></span>所有商品分类</a>
 
 				</div>
@@ -163,8 +165,9 @@
 		</div>
 	</div>
 
-	<script>
+	<script type="text/javascript">
         $(function(){
+
             //默认搜索词更新
             var bar_type = 'detail';
             if(bar_type == 'index' || bar_type == 'detail'){
@@ -413,20 +416,37 @@
 
 	<script type="text/javascript">
     
-    $(function(){
-    
-    $("#MyaddPrice02").click(function(){
-    
-  	var shref="UserBooksServlet?opr=add&usid=${uid.uid}&bokimg=${bookxq.bookimg }&boksj=${bookxq.price}&bokdj=${bookxq.discount}&bookids=${bookxq.bookid }&bokname=${bookxq.bookname}&count="+$("#countss").val();
-  	
-    $("#ids").attr("href",shref);
-    
-    });
-    
-    
-    })
-    
-    
+    $(function() {
+		$("#MyaddPrice02").click(function () {
+			/*alert("usid===>"+$("#bookid").html()+"====>uid:"+$(".uid").html());*/
+
+			$.post("/car/addUserBooks.html",{usid: $("#bookid").html(), count: $("#countss").val(), uid: $(".uid").html()},function (data) {
+				if (data.resultMap=="true") {
+					/*alert("加入购物车成功！");*/
+					$("#mes").html("加入购物车成功!").show(300).delay(1000).hide(300);
+				}else if(data.resultMap=="notlogin"){
+					/* alert("请先登录！再加入购物车！");*/
+					$("#mes").html("请先登录！再加入购物车!").show(300).delay(1000).hide(300);
+				}
+			},"json");
+
+			/*$.ajax({
+                type: "POST",
+                url: "/car/addUserBooks.html",
+                data: {usid: $("#bookid").html(), count: $("#countss").val(), uid: $(".uid").html()},
+                dataType: "json",
+                success: function (data) {
+                    if (data.addResult == "true") {
+                        /!*alert("加入购物车成功！");*!/
+                        $("#mes").html("加入购物车成功!").show(300).delay(1000).hide(300);
+                    }else if (data.addResult == "notuser") {
+                       /!* alert("请先登录！再加入购物车！");*!/
+                        $("#mes").html("请先登录！再加入购物车!").show(300).delay(1000).hide(300);
+                    }
+                }
+            });*/
+        })
+	});
     
     </script>
 
@@ -456,7 +476,7 @@
 
 
 							<!--data-bgimg商品图片 data-tmp点击显示大图-->
-							<img src="${bookxq.bookimg }" />
+							<img src="/statics/${bookxq.bookimg }" />
 
 
 						</ul>
@@ -478,6 +498,8 @@
 					<p class="bname" class="fs-18 cl-3 lh-40 to-hd fw-bd mb-10">
 						<span id="www_goods_tags" class="cl-rd-l"></span>
 						 <span id="www_goods_name" >${bookxq.bookname }</span>
+						<span id="bookid" style="display: none">${bookxq.bookid}</span>
+                        <span class="uid" style="display: none">${uid.uid}</span>
 					</p>
 					<span id="www_goods_upper_title" style="color:grey;">
 						${bookxq.info } </span>
@@ -587,7 +609,7 @@
 
 
 					<a id="ids"
-						href="UserBooksServlet?opr=add&usid=${uid.uid}&Bookids=${bookxq.bookid }$count=">
+						href="javascript:void(0);">
 						<div id="MyaddPrice02" value="">
 							<h3>加入购物车</h3>
 						</div> </a>
@@ -616,7 +638,7 @@
 	margin-left: 200px;
 	margin-top: -52px;
 	background-color: #D5F0FB;
-	background-image: url(img/GouWuChe.png);
+	/*background-image: url(/statics/img/GouWuChe.png);*/
 	background-repeat: no-repeat;
 	background-position: 30px 10px;
 }
@@ -733,6 +755,7 @@
 					</table>
 
 				</div>
+            </div>
 
 				<!-- 当前商品所在的店铺 -->
 

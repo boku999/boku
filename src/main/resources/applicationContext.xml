@@ -29,7 +29,7 @@
 	<!--配置SqlSessionFactoryBean类-->
 	<bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"/>
-		<property name="typeAliasesPackage" value="cn.bdqn.pojo"/>
+		<property name="typeAliasesPackage" value="cn.bdqn.entity"/>
 	</bean>
 
 	<!--配置MapperScanner，作用自动生成dao的实现类-->
@@ -47,7 +47,7 @@
 	<!--定义规则-->
 	<tx:advice id="myAdvice">
 		<tx:attributes>
-			<tx:method name="find*" read-only="true"/>
+			<tx:method name="get*" read-only="true"/>
 			<tx:method name="*"/>
 		</tx:attributes>
 	</tx:advice>

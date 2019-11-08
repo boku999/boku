@@ -27,7 +27,7 @@
 <script type="text/javascript"
 	src="https://bnmpstyle.bookuu.com/www/js/flexslider/jquery.flexslider.js"></script>
 <meta name="baidu-site-verification" content="s3QQaARPSL" />
-<title id="www_pc_title">博库网</title>
+<title id="www_pc_title">所有图书分类-博库体验店</title>
 </head>
 
 <body>
@@ -40,15 +40,15 @@
 				<p class="fl" id="www_user_session_info">
 					<c:choose>
 						<c:when test="${isok==false }">
-							<a class="hover cl-6" href="login.jsp" title="登录">登录</a>
+							<a class="hover cl-6" href="/user/login.html" title="登录">登录</a>
 							<span class="pd-0005 cl-c">|</span>
-							<a class="mr-30 hover cl-6" href="registered.jsp" title="免费注册">免费注册</a>
+							<a class="mr-30 hover cl-6" href="/user/registered.html" title="免费注册">免费注册</a>
 						</c:when>
 						<c:otherwise>
 					欢迎：${uid.uname}
 					<span class="pd-0005 cl-c">|</span>
-							<a class="mr-30 hover cl-6" href="BookServlet?opr=out&isok=false"
-								title="退出登陆">退出登陆</a>
+							<a class="mr-30 hover cl-6" href="/user/loginout.html?url=Classification"
+								title="退出登录">退出登录</a>
 						</c:otherwise>
 					</c:choose>
 					<a class="hover cl-6" href="/download.php" target="_blank"
@@ -56,7 +56,7 @@
 						class="icon-phone-line cl-bl-l fs-16 tp-3 mr-2 pr"></span>下载博库APP</a>
 				</p>
 				<p class="fr">
-					<a class="hover fr cl-6" href="javascript:void()"
+					<a class="hover fr cl-6" href="javascript:void(0);"
 						onclick="openQimooChat();" title="联系客服">联系客服</a> <span
 						class="pd-0015 cl-c fr">|</span> <a class="hover fr cl-6"
 						href="/user/shop/settings.php" target="_blank" title="店铺管理">店铺管理</a>
@@ -89,8 +89,8 @@
 		<div class="wd-1200 ma">
 			<div class="search-container" id="search-container">
 				<div class="logo-container">
-					<a class="db logo-box fl" href="Mnag.jsp"> <img
-						src="img/logo.png" alt="" width="220" class="db" alt="logo"
+					<a class="db logo-box fl" href="/book/Mnag.html"> <img
+						src="/statics/img/logo.png" alt="" width="220" class="db" alt="logo"
 						draggable="false" /> </a>
 					<!-- 搜索 -->
 					<div class="fl">
@@ -450,7 +450,7 @@
 				<li class="pd-1000 bb-1-e8-d fs-13">
 					<div class="wd-120 pd-0010 fl cl-bl-l">
 						<a class="cl-bl-l"
-							href="PageServlet?opr=pge&cid=${corlist[4].categoryid }">${corlist[4].categoryname
+							href="/book/page.html?cid=${corlist[4].categoryid }">${corlist[4].categoryname
 							}</a>
 					</div>
 					<div class="wd-940 fl">
@@ -502,7 +502,7 @@
 				<li class="pd-1000 bb-1-e8-d fs-13">
 					<div class="wd-120 pd-0010 fl cl-bl-l">
 						<a class="cl-bl-l"
-							href="PageServlet?opr=pge&cid=${corlist[0].categoryid }">${corlist[0].categoryname
+							href="/book/page.html?cid=${corlist[0].categoryid }">${corlist[0].categoryname
 							}</a>
 					</div>
 					<div class="wd-940 fl">
@@ -552,7 +552,7 @@
 				<li class="pd-1000 bb-1-e8-d fs-13">
 					<div class="wd-120 pd-0010 fl cl-bl-l">
 						<a class="cl-bl-l"
-							href="PageServlet?opr=pge&cid=${corlist[1].categoryid }">${corlist[1].categoryname
+							href="/book/page.html?cid=${corlist[1].categoryid }">${corlist[1].categoryname
 							}</a>
 					</div>
 					<div class="wd-940 fl">
@@ -577,7 +577,7 @@
 				<li class="pd-1000 bb-1-e8-d fs-13">
 					<div class="wd-120 pd-0010 fl cl-bl-l">
 						<a class="cl-bl-l"
-							href="PageServlet?opr=pge&cid=${corlist[2].categoryid }">${corlist[2].categoryname
+							href="/book/page.html?cid=${corlist[2].categoryid }">${corlist[2].categoryname
 							}</a>
 					</div>
 					<div class="wd-940 fl">
@@ -619,7 +619,7 @@
 				<li class="pd-1000 bb-1-e8-d fs-13">
 					<div class="wd-120 pd-0010 fl cl-bl-l">
 						<a class="cl-bl-l"
-							href="PageServlet?opr=pge&cid=${corlist[3].categoryid }">${corlist[3].categoryname
+							href="/book/page.html?cid=${corlist[3].categoryid }">${corlist[3].categoryname
 							}</a>
 					</div>
 					<div class="wd-940 fl">
