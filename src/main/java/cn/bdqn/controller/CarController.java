@@ -6,10 +6,7 @@ import cn.bdqn.service.orderitem.OrderItemService;
 import cn.bdqn.service.orders.OrdersService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -31,7 +28,7 @@ public class CarController {
     //购物车集合
     private List<UserBooks> list=new ArrayList<UserBooks>();;
     //购物结算集合
-    private List<UserBooks> ulist=new ArrayList<UserBooks>();
+    private List<UserBooks> ulist;
 
     //进入购物车
     @RequestMapping("/userBooks.html")
@@ -146,23 +143,29 @@ public class CarController {
             for (UserBooks item:list){
                 if(item.getBookid()==Integer.parseInt(bookid)){
                     ulist.add(item);
-                }else{
-                    ulist.remove(item);
                 }
             }
-            flag=true;
+            flag=false;
         }
+
         if(flag) {
             for (UserBooks item : list) {
                 if (item.getBookid() == Integer.parseInt(bookid)) {
                     ulist.add(item);
-                } else {
-                    ulist.remove(item);
                 }
             }
         }
         System.out.println("ulist===>"+ulist.toString());
         request.getSession().setAttribute("ulist",ulist);
+        return "true";
+    }
+
+    @RequestMapping("/clear.html")
+    @ResponseBody
+    public String clearulist(HttpServletRequest request){
+        //清除结算集合
+        ulist=new ArrayList<UserBooks>();
+        request.getSession().removeAttribute("ulist");
         return "true";
     }
 

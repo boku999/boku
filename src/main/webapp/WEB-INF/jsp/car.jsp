@@ -127,9 +127,14 @@
             if (cheSize == 0) {
                 $("#mes").html("请选择要结算的商品！").show(300).delay(1000).hide(300);
             } else {
+                //调用清除集合ajax
+                $.get("/car/clear.html",{},function (data) {
+                },"json")
+
+                //把选中的bookid传递过去
                 $(che).each(function (i, dom) {
                     var bookid = $(this).parent().parent().find(".bookid").val();
-                    /*alert("bookid======>"+bookid+"i===>"+i);*/
+                    alert("bookid======>"+bookid+"i===>"+i);
                     $.get("/car/banlances.html", {bookid: bookid},
                         function (data) {
                         }, "json")
