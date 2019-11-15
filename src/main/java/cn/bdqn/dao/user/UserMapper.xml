@@ -10,4 +10,7 @@
     <insert id="addUser" parameterType="user">
 		INSERT INTO `user`(uname,upwd) VALUE(#{uname},#{upwd})
 	</insert>
+	<update id="updUser" parameterType="User">
+        update user set upwd=#{upwd} where uname=#{uname}
+    </update>
 </mapper>

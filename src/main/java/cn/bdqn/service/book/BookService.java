@@ -17,4 +17,48 @@ public interface BookService {
     List<Book> getBookBycategoryid(int categoryid);
 
     Book getBookByid(int bookid);
+
+    /**
+     * 查询总数量
+     * @return
+     */
+    int getBookCount();
+    /**
+     * 查询所有书籍
+     *
+     * @return
+     */
+    List<Book> getUserHouList(String bookname, int categoryid,
+                           int currentPageNo, int pageSize);
+
+    /**
+     * 添加书籍
+     *
+     * @return
+     */
+    int addBook(Book book);
+
+    /**
+     * 删除图书(根据编号删除)
+     *
+     * @param bookid
+     * @return
+     */
+    int delBook(int bookid);
+
+    /**
+     * 查询书籍(更具编号查询)
+     *
+     * @param bookid
+     * @return
+     */
+    Book getBook(int bookid);
+
+    /**
+     * 修改书籍
+     *
+     * @param book
+     * @return
+     */
+    int updBook(Book book);
 }

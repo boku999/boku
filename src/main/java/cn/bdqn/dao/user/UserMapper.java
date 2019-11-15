@@ -8,4 +8,14 @@ public interface UserMapper {
 
     int addUser(@Param("uname") String uname,
                 @Param("upwd") String upwd);
+
+    /**
+     * 修改密码
+     * @param
+     * @return
+     */
+    int updUser(User user);
+
+
+
 }

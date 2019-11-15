@@ -43,6 +43,10 @@ public class UserServiceImpl implements UserService {
     }
 
 
+    @Override
+    public int updUser(User user) {
+        return userMapper.updUser(user);
+    }
 
     public static void main(String[] args) {
         System.out.println(2111);

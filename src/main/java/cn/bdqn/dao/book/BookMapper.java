@@ -18,4 +18,46 @@ public interface BookMapper {
     Book getBookByid(@Param("bookid")int bookid);
     //获取总条数
     int getPageCount(@Param("categoryid")int categoryid);
+
+    /**后台
+     * 查询总数量
+     * @return
+     */
+    int getBookCount();
+
+    /**
+     * 分页显示所有书籍
+     *
+     * @return
+     */
+    List<Book> getUserHouList(@Param("bookname") String bookname,
+                           @Param("categoryid") int categoryid,
+                           @Param("currentPageNo") int currentPageNo,
+                           @Param("pageSize") int pageSize);
+
+    /**
+     * 添加书籍
+     * @return
+     */
+    int addBook(Book book);
+    /**
+     * 删除图书(根据编号删除)
+     * @param bookid
+     * @return
+     */
+    int delBook(@Param("bookid") int bookid);
+
+    /**
+     * 查询书籍(更具编号查询)
+     * @param bookid
+     * @return
+     */
+    Book getBook(@Param("bookid") int bookid);
+
+    /**
+     * 修改书籍
+     * @param book
+     * @return
+     */
+    int updBook(Book book);
 }

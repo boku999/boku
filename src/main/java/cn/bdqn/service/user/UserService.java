@@ -10,4 +10,13 @@ public interface UserService {
 
     //验证名字是否重复
     boolean isName(String uname);
+
+
+    /**
+     * 修改密码
+     * @param
+     * @return
+     */
+    int updUser(User user);
+
 }

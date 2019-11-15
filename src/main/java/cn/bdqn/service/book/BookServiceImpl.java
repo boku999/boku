@@ -40,4 +40,34 @@ public class BookServiceImpl implements BookService {
         // TODO Auto-generated method stub
         return bookMapper.getBookByid(bookid);
     }
+
+    @Override
+    public int getBookCount() {
+        return bookMapper.getBookCount();
+    }
+
+    @Override
+    public List<Book> getUserHouList(String bookname, int categoryid, int currentPageNo, int pageSize) {
+        return bookMapper.getUserHouList(bookname,categoryid,(currentPageNo-1)*pageSize,pageSize);
+    }
+    @Override
+    public int addBook(Book book) {
+        return bookMapper.addBook(book);
+    }
+
+    @Override
+    public int delBook(int bookid) {
+        return bookMapper.delBook(bookid);
+    }
+
+    @Override
+    public Book getBook(int bookid) {
+        return bookMapper.getBook(bookid);
+    }
+
+    @Override
+    public int updBook(Book book) {
+        return bookMapper.updBook(book);
+    }
+
 }

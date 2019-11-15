@@ -14,7 +14,7 @@ public class Book {
     private int quantity;//库存
     private String bookimg;//图片
     private String info;//内容简介
-    private String publicationdate;//出版日期
+    private String publicationDate;//出版日期
     private int discount;//原价
     private int sellcount;//销售数量
 
@@ -98,12 +98,12 @@ public class Book {
         this.info = info;
     }
 
-    public String getPublicationdate() {
-        return publicationdate;
+    public String getPublicationDate() {
+        return publicationDate;
     }
 
-    public void setPublicationdate(String publicationdate) {
-        this.publicationdate = publicationdate;
+    public void setPublicationDate(String publicationDate) {
+        this.publicationDate = publicationDate;
     }
 
     public int getDiscount() {
@@ -120,7 +120,7 @@ public class Book {
                 + ", categoryid=" + categoryid + ", author=" + author
                 + ", sell=" + sell + ", price=" + price + ", quantity="
                 + quantity + ", bookimg=" + bookimg + ", info=" + info
-                + ", publicationdate=" + publicationdate + ", discount="
+                + ", publicationDate=" + publicationDate + ", discount="
                 + discount + "]";
     }
 

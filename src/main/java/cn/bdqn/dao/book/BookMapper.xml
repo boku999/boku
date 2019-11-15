@@ -38,4 +38,35 @@
     <select id="getPageCount" resultType="int">
 		SELECT count(*) FROM book where categoryid=#{categoryid}
 	</select>
+
+    <select id="getBookCount" resultType="int">
+        select count(*) from book;
+    </select>
+    <select id="getUserHouList" resultType="Book">
+        select * from book
+        <trim prefix="where" prefixOverrides="and|or">
+            <if test="bookname!=null and bookname!=''">
+                and bookname like CONCAT('%',#{bookname},'%')
+            </if>
+            <if test="categoryid!=0">
+                and categoryid =#{categoryid}
+            </if>
+        </trim>
+        limit #{currentPageNo},#{pageSize}
+    </select>
+    <insert id="addBook" parameterType="Book">
+        insert into book value(null,#{bookname},#{categoryid},#{author},#{sell},#{publicationDate},#{info},#{quantity},#{price},null,#{discount});
+    </insert>
+    <delete id="delBook" parameterType="Book">
+        delete from book where bookid=#{bookid}
+    </delete>
+    <select id="getBook" resultType="Book">
+        select * from book where bookid=#{bookid}
+    </select>
+    <update id="updBook" parameterType="Book">
+        update book set bookname=#{bookname},author=#{author},
+        PublicationDate=#{publicationDate},
+        quantity=#{quantity},Discount=#{discount},price=#{price}
+         where bookid=#{bookid}
+    </update>
 </mapper>
